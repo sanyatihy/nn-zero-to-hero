@@ -29,7 +29,6 @@ print('number of examples: ', num)
 
 # initialize the 'network'
 g = torch.Generator().manual_seed(2147483647)
-# W = torch.randn((27, 27), generator=g, requires_grad=True)
 embedding = nn.Embedding(num_embeddings=27, embedding_dim=1)
 embedding.weight.data = torch.randn((27, 27), generator=g, requires_grad=True)
 
